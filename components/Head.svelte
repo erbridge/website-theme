@@ -4,7 +4,6 @@
   export let description: string | null = null;
   export let image: string | null = null;
   export let title: string | null = null;
-  export let url: string | null = null;
 </script>
 
 <svelte:head>
@@ -24,10 +23,6 @@
 
   {#if image}
     <meta property="og:image" content={image} />
-  {/if}
-
-  {#if url}
-    <meta property="og:url" content={url} />
   {/if}
 
   <meta property="og:locale" content="en_GB" />
