@@ -6,6 +6,7 @@
   },
   "peerDependencies": {
     "normalize.css": "^8.0.1",
+    "sapper": "^0.29.0",
     "svelte": "^3.31.2",
     "typescript": "^4.0.3"
   },
