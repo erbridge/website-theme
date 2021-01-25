@@ -106,7 +106,14 @@ cite {
   font-style: normal;
 }
 
-code {
+/**
+ * We select children of `body` to override normalize.css with a higher
+ * specificity.
+ */
+body code,
+body kbd,
+body pre,
+body samp {
   font-family: var(--monospace-font-family);
 }
 
