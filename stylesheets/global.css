@@ -60,6 +60,10 @@ a {
     color var(--transition-properties);
 }
 
+p a {
+  margin: 0.05em;
+}
+
 a:active,
 a:focus,
 a:focus-within,
