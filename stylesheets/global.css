@@ -142,10 +142,6 @@ img {
   outline-offset: 2px;
 }
 
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
 @media (min-width: 400px) {
   :root {
     font-size: 16px;
