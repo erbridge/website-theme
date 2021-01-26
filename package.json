@@ -1,5 +1,6 @@
 {
   "name": "@erbridge/website-theme",
+  "version": "0.1.0",
   "svelte": "index.ts",
   "scripts": {
     "validate": "svelte-check"
