@@ -3,7 +3,7 @@
   --body-font-family: "Cochin", "Hoefler Text", "Garamond", "Times New Roman",
     serif;
   --monospace-font-family: "Andale Mono", "Lucida Console", "Courier New",
-    monospace;
+    monospace, monospace;
 
   --transition-properties: 0.5s ease-out;
 
