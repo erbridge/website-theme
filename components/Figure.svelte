@@ -71,10 +71,10 @@
 <figure>
   {#if clickable}
     <a href={src} on:click={toggleLightbox} bind:this={anchor}
-      ><img {src} {alt} aria-describedby={captionId} /></a
+      ><img {src} {alt} aria-describedby={captionId} loading="lazy" /></a
     >
   {:else}
-    <img {src} {alt} aria-describedby={captionId} />
+    <img {src} {alt} aria-describedby={captionId} loading="lazy" />
   {/if}
   <figcaption id={captionId}>
     <slot />
