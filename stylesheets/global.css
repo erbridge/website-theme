@@ -5,12 +5,14 @@
   --monospace-font-family: "Andale Mono", "Lucida Console", "Courier New",
     monospace, monospace;
 
+  --base-line-height: 1.3;
+
   --transition-properties: 0.5s ease-out;
 
   background-color: rgb(var(--background-colour));
   font-family: var(--body-font-family);
   font-size: 14px;
-  line-height: 1.3;
+  line-height: var(--base-line-height);
   color: rgb(var(--text-colour));
 }
 
