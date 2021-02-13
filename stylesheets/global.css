@@ -148,6 +148,11 @@ img {
   outline-offset: 2px;
 }
 
+::selection {
+  color: rgb(var(--background-colour));
+  background: rgba(var(--accent-colour), 0.8);
+}
+
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
