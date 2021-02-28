@@ -18,6 +18,11 @@
 
 * {
   box-sizing: border-box;
+  transition: background-color var(--transition-properties),
+    border-color var(--transition-properties),
+    color var(--transition-properties),
+    outline-color var(--transition-properties),
+    text-decoration-color var(--transition-properties);
 }
 
 html,
@@ -108,6 +113,31 @@ blockquote p::before {
 blockquote p::after {
   content: "”";
   margin-left: -0.05em;
+}
+
+body button {
+  border: 2px solid rgb(var(--accent-colour));
+  padding: 0.3em 0.5em;
+  background: none;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: lowercase;
+  color: rgb(var(--text-colour));
+  cursor: pointer;
+}
+
+body button:focus {
+  outline: rgb(var(--accent-colour)) dashed 1px;
+  outline-offset: 2px;
+}
+
+body button:active,
+body button:focus,
+body button:focus-within,
+body button:hover {
+  color: rgb(var(--background-colour));
+  background-color: rgb(var(--accent-colour));
 }
 
 cite {

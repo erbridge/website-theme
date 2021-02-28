@@ -1,5 +1,6 @@
 <script lang="ts">
   import Nav from "../components/Nav.svelte";
+  import ThemeToggle from "../components/ThemeToggle.svelte";
 
   export let segment: string;
   export let contactEmail: string;
@@ -13,6 +14,8 @@
 
 <header>
   <Nav {segment} {internalLinks} {externalLink} />
+
+  <div><ThemeToggle /></div>
 </header>
 
 <main>
@@ -41,7 +44,20 @@
     padding: 1rem;
   }
 
+  header {
+    position: relative;
+  }
+
+  header > div {
+    margin-top: 0.2rem;
+    position: absolute;
+    left: 1rem;
+    z-index: 1;
+    font-size: 0.8em;
+  }
+
   main {
+    min-height: 0;
     flex-grow: 1;
   }
 
@@ -51,5 +67,13 @@
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+  }
+
+  @media (min-width: 700px) {
+    header > div {
+      margin-top: 0.3rem;
+      right: 1rem;
+      left: auto;
+    }
   }
 </style>
