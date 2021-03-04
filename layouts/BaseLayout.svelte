@@ -69,7 +69,7 @@
     list-style: none;
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
     header > div {
       margin-top: 0.3rem;
       right: 1rem;

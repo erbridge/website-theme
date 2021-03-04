@@ -193,13 +193,13 @@ img {
   width: 1px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 640px) {
   :root {
     font-size: 16px;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   :root {
     font-size: 18px;
   }
