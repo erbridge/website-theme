@@ -99,6 +99,24 @@ a[href^="mailto"]:focus {
   outline-color: rgb(var(--secondary-accent-colour));
 }
 
+a[href^="http"]::after,
+a[href^="mailto"]::after {
+  content: " ⤴";
+  color: rgba(var(--text-colour), 0.7);
+  transition: color var(--transition-properties);
+}
+
+a[href^="http"]:active::after,
+a[href^="mailto"]:active::after,
+a[href^="http"]:focus::after,
+a[href^="mailto"]:focus::after,
+a[href^="http"]:focus-within::after,
+a[href^="mailto"]:focus-within::after,
+a[href^="http"]:hover::after,
+a[href^="mailto"]:hover::after {
+  color: rgb(var(--secondary-accent-colour));
+}
+
 blockquote {
   margin-left: 2em;
   margin-right: 2em;

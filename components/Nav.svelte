@@ -78,6 +78,10 @@
     border-bottom-color: rgb(var(--secondary-accent-colour));
   }
 
+  a[href^="http"]::after {
+    content: "";
+  }
+
   a:not(:last-child) {
     margin-right: 0.5em;
   }
