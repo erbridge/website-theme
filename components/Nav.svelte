@@ -14,6 +14,7 @@
       <li>
         <a
           sapper:prefetch
+          sapper:noscroll
           aria-current={segment === link.segment ? "page" : undefined}
           href={link.href}>{link.label || link.href}</a
         >
