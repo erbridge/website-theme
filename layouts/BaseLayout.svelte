@@ -52,7 +52,6 @@
     margin-top: 0.2rem;
     position: absolute;
     left: 1rem;
-    z-index: 1;
     font-size: 0.8em;
   }
 
