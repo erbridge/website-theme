@@ -2,6 +2,8 @@
   import type { FocusTrap } from "focus-trap";
   import { onMount } from "svelte";
   import { portal } from "svelte-portal";
+  import { sineIn, sineOut } from "svelte/easing";
+  import { blur } from "svelte/transition";
 
   export let src: string;
   export let alt: string;
@@ -89,6 +91,8 @@
     aria-modal="true"
     use:portal={"body"}
     use:onCreateLightbox
+    in:blur={{ duration: 600, easing: sineOut }}
+    out:blur={{ delay: 400, duration: 600, easing: sineIn }}
     hidden
   >
     <div
@@ -97,7 +101,10 @@
       aria-label="close lightbox"
       on:click={toggleLightbox}
     />
-    <figure>
+    <figure
+      in:blur={{ delay: 400, duration: 600, easing: sineOut }}
+      out:blur={{ duration: 600, easing: sineIn }}
+    >
       <img {src} {alt} aria-describedby="lightbox-{captionId}" />
       <figcaption id="lightbox-{captionId}">
         <slot /><br />
