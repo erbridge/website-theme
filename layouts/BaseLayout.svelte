@@ -1,4 +1,5 @@
 <script lang="ts">
+  import feather from "feather-icons";
   import Nav from "../components/Nav.svelte";
   import ThemeToggle from "../components/ThemeToggle.svelte";
 
@@ -27,10 +28,17 @@
 <footer>
   <ul>
     <li>
-      <a rel="external me" href="https://twitter.com/erbridge">twitter</a>
+      {@html feather.icons.twitter.toSvg({ role: "presentation" })}
+      <a rel="external me" href="https://twitter.com/erbridge"> twitter</a>
     </li>
-    <li><a rel="external me" href="https://github.com/erbridge">github</a></li>
-    <li><a href="mailto:{contactEmail}">email</a></li>
+    <li>
+      {@html feather.icons.github.toSvg({ role: "presentation" })}
+      <a rel="external me" href="https://github.com/erbridge"> github</a>
+    </li>
+    <li>
+      {@html feather.icons["at-sign"].toSvg({ role: "presentation" })}
+      <a href="mailto:{contactEmail}"> email</a>
+    </li>
   </ul>
 </footer>
 
@@ -66,6 +74,13 @@
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+  }
+
+  ul :global(svg) {
+    width: 1em;
+    height: 1em;
+    vertical-align: bottom;
+    color: rgb(var(--accent-colour));
   }
 
   @media (min-width: 768px) {
