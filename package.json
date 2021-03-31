@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@formatjs/intl-datetimeformat": "^3.3.0",
-    "@formatjs/intl-getcanonicallocales": "^1.5.7",
+    "@formatjs/intl-getcanonicallocales": "^1.5.8",
     "@formatjs/intl-locale": "^2.4.20",
     "@formatjs/intl-numberformat": "^6.2.4",
     "@formatjs/intl-pluralrules": "^4.0.12",
     "feather-icons": "^4.28.0",
     "focus-trap": "^6.3.0",
-    "svelte-portal": "^2.1.1"
+    "svelte-portal": "^2.1.2"
   },
   "devDependencies": {
     "@types/feather-icons": "^4.7.0",
