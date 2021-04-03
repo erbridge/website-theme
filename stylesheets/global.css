@@ -173,6 +173,27 @@ body samp {
   font-family: var(--monospace-font-family);
 }
 
+details {
+  margin: 1em 0;
+}
+
+details > :not(summary) {
+  border-left: 2px solid rgb(var(--accent-colour));
+  padding-left: 1em;
+}
+
+details summary {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+details summary::marker {
+  color: rgb(var(--accent-colour));
+}
+
 figcaption {
   font-size: 0.8em;
 }
