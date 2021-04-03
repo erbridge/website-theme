@@ -1,5 +1,5 @@
 <script lang="ts">
-  import feather from "feather-icons";
+  import { AtSign, Github, Twitter } from "@erbridge/svelte-feather";
   import Nav from "../components/Nav.svelte";
   import ThemeToggle from "../components/ThemeToggle.svelte";
 
@@ -28,15 +28,15 @@
 <footer>
   <ul>
     <li>
-      {@html feather.icons.twitter.toSvg({ role: "presentation" })}
+      <Twitter role="presentation" />
       <a rel="external me" href="https://twitter.com/erbridge"> twitter</a>
     </li>
     <li>
-      {@html feather.icons.github.toSvg({ role: "presentation" })}
+      <Github role="presentation" />
       <a rel="external me" href="https://github.com/erbridge"> github</a>
     </li>
     <li>
-      {@html feather.icons["at-sign"].toSvg({ role: "presentation" })}
+      <AtSign role="presentation" />
       <a href="mailto:{contactEmail}"> email</a>
     </li>
   </ul>
