@@ -1,7 +1,6 @@
 <script lang="ts">
   import { AtSign, Github, Twitter } from "@erbridge/svelte-feather";
   import Nav from "../components/Nav.svelte";
-  import ThemeToggle from "../components/ThemeToggle.svelte";
 
   export let segment: string;
   export let contactEmail: string;
@@ -15,8 +14,6 @@
 
 <header>
   <Nav {segment} {internalLinks} {externalLink} />
-
-  <div><ThemeToggle /></div>
 </header>
 
 <main>
@@ -56,13 +53,6 @@
     position: relative;
   }
 
-  header > div {
-    margin-top: 0.2rem;
-    position: absolute;
-    left: 1rem;
-    font-size: 0.8em;
-  }
-
   main {
     min-height: 0;
     flex-grow: 1;
@@ -81,13 +71,5 @@
     height: 1em;
     vertical-align: bottom;
     color: rgb(var(--accent-colour));
-  }
-
-  @media (min-width: 768px) {
-    header > div {
-      margin-top: 0.3rem;
-      right: 1rem;
-      left: auto;
-    }
   }
 </style>

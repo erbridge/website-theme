@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Moon, Sun } from "@erbridge/svelte-feather";
   import { onMount } from "svelte";
 
   let theme: "dark" | "light" | null = null;
@@ -25,11 +26,7 @@
     );
   }
 
-  function endThemeTrial(event?: Event) {
-    if (event?.target === document.activeElement) {
-      return;
-    }
-
+  function endThemeTrial() {
     document.documentElement.classList.add(
       theme === "dark" ? "theme--dark" : "theme--light"
     );
@@ -51,6 +48,7 @@
         );
 
         theme = value;
+        trialTheme = null;
       }
 
       window
@@ -74,6 +72,38 @@
     on:blur={endThemeTrial}
     on:mouseenter={startThemeTrial}
     on:mouseleave={endThemeTrial}
-    on:click={toggleTheme}>go {theme === "light" ? "dark" : "light"}</button
+    on:click={toggleTheme}
   >
+    {#if theme === "dark"}
+      <Sun fill="currentColor" aria-label="change to light theme" />
+    {:else}
+      <Moon fill="currentColor" aria-label="change to dark theme" />
+    {/if}
+  </button>
 {/if}
+
+<style>
+  button {
+    margin-left: 0.5em;
+    border: none;
+    padding: 0;
+  }
+
+  button:active,
+  button:focus,
+  button:focus-within,
+  button:hover {
+    color: rgb(var(--accent-colour));
+    background: none;
+  }
+
+  button :global(*) {
+    pointer-events: none;
+  }
+
+  button :global(svg) {
+    display: block;
+    width: 1em;
+    height: 1em;
+  }
+</style>

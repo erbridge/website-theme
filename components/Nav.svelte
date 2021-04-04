@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ThemeToggle from "./ThemeToggle.svelte";
+
   export let segment: string;
   export let internalLinks: {
     href: string;
@@ -28,6 +30,8 @@
       >
     </li>
   </ul>
+
+  <ThemeToggle />
 </nav>
 
 <style>
@@ -35,9 +39,12 @@
     font-family: var(--heading-font-family);
     font-weight: 600;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
   }
 
   ul {
+    flex: 1;
     margin: 0;
     padding: 0;
     display: flex;
