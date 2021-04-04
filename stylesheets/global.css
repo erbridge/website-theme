@@ -21,8 +21,7 @@
   transition: background-color var(--transition-properties),
     border-color var(--transition-properties),
     color var(--transition-properties),
-    outline-color var(--transition-properties),
-    text-decoration-color var(--transition-properties);
+    outline-color var(--transition-properties);
 }
 
 html,
