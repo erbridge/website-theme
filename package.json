@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@erbridge/svelte-feather": "0.0.2",
-    "@formatjs/intl-datetimeformat": "^3.3.1",
+    "@formatjs/intl-datetimeformat": "^3.3.3",
     "@formatjs/intl-getcanonicallocales": "^1.5.8",
     "@formatjs/intl-locale": "^2.4.21",
     "@formatjs/intl-numberformat": "^6.2.5",
