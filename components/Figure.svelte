@@ -29,7 +29,6 @@
     "-"
   )}-caption-${Math.floor(Math.random() * 10000)}`;
 
-  let anchor: HTMLAnchorElement;
   let isLightboxVisible = false;
 
   $: if (isMounted) {
@@ -72,7 +71,7 @@
 
 <figure>
   {#if clickable}
-    <a href={src} on:click={toggleLightbox} bind:this={anchor}
+    <a href={src} on:click={toggleLightbox}
       ><img {src} {alt} aria-describedby={captionId} loading="lazy" /></a
     >
   {:else}
