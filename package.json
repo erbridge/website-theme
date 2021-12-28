@@ -18,6 +18,7 @@
     "@formatjs/intl-locale": "^2.4.41",
     "@formatjs/intl-numberformat": "^6.2.5",
     "@formatjs/intl-pluralrules": "^4.2.0",
+    "@types/node": "^14.18.3",
     "focus-trap": "^6.3.0",
     "svelte-portal": "^2.1.2"
   },
