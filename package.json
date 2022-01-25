@@ -17,7 +17,7 @@
     "@formatjs/intl-getcanonicallocales": "^1.5.8",
     "@formatjs/intl-locale": "^2.4.41",
     "@formatjs/intl-numberformat": "^7.3.0",
-    "@formatjs/intl-pluralrules": "^4.2.0",
+    "@formatjs/intl-pluralrules": "^4.3.1",
     "@types/node": "^14.18.3",
     "focus-trap": "^6.3.0",
     "svelte-portal": "^2.1.2"
