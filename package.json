@@ -23,7 +23,7 @@
     "svelte-portal": "^2.1.2"
   },
   "devDependencies": {
-    "svelte": "^3.37.0",
+    "svelte": "^3.50.1",
     "svelte-check": "^2.2.11"
   }
 }
