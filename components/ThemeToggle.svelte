@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
 
   let theme: "dark" | "light" | null = null;
-  let trialTheme: typeof theme = null;
+  let trialTheme: "dark" | "light" | null = null;
 
   function toggleTheme() {
     if (!theme) {

@@ -1,11 +1,12 @@
 <script lang="ts">
   import ThemeToggle from "./ThemeToggle.svelte";
 
-  export let segment: string;
+  export let pathname: string;
   export let internalLinks: {
     href: string;
-    segment: string | undefined;
-    label?: string;
+    pathPrefix: string;
+    exact?: boolean;
+    label: string;
   }[];
   export let externalLink:
     | { href: string; label: string; rel?: string[] }
@@ -17,10 +18,16 @@
     {#each internalLinks as link}
       <li>
         <a
-          sapper:prefetch
-          sapper:noscroll
-          aria-current={segment === link.segment ? "page" : undefined}
-          href={link.href}>{link.label || link.href}</a
+          data-sveltekit-prefetch
+          data-sveltekit-noscroll
+          aria-current={(
+            link.exact
+              ? pathname === link.pathPrefix
+              : pathname.startsWith(link.pathPrefix)
+          )
+            ? "page"
+            : undefined}
+          href={link.href}>{link.label}</a
         >
       </li>
     {/each}

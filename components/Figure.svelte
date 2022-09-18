@@ -7,7 +7,7 @@
 
   export let src: string;
   export let alt: string;
-  export let rootElementId = "sapper";
+  export let rootElementId = "app";
   export let clickable = true;
 
   let isMounted = false;
@@ -53,6 +53,11 @@
 
   function onCreateLightbox(dialog: HTMLElement) {
     const root = document.getElementById(rootElementId);
+
+    if (!root) {
+      return;
+    }
+
     const dialogFocusTrap = createDialogFocusTrap(dialog);
 
     dialogFocusTrap.activate();
@@ -67,7 +72,7 @@
   }
 </script>
 
-<svelte:window on:keydown={clickable && escapeLightbox} />
+<svelte:window on:keydown={clickable ? escapeLightbox : undefined} />
 
 <figure>
   {#if clickable}

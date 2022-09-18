@@ -7,12 +7,13 @@
   } from "@erbridge/svelte-feather";
   import Nav from "../components/Nav.svelte";
 
-  export let segment: string;
+  export let pathname: string;
   export let contactEmail: string;
   export let internalLinks: {
     href: string;
-    segment: string | undefined;
-    label?: string;
+    pathPrefix: string;
+    exact?: boolean;
+    label: string;
   }[];
   export let externalLink:
     | { href: string; label: string; rel?: string[] }
@@ -20,7 +21,7 @@
 </script>
 
 <header>
-  <Nav {segment} {internalLinks} {externalLink} />
+  <Nav {pathname} {internalLinks} {externalLink} />
 </header>
 
 <main>
@@ -73,6 +74,7 @@
     position: sticky;
     margin: 0 auto;
     padding-top: 2rem;
+    width: fit-content;
     bottom: 0;
     z-index: -1;
   }
