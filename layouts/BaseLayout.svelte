@@ -9,7 +9,9 @@
     segment: string | undefined;
     label?: string;
   }[];
-  export let externalLink: { href: string; label: string; rel?: string[] };
+  export let externalLink:
+    | { href: string; label: string; rel?: string[] }
+    | undefined = undefined;
 </script>
 
 <header>

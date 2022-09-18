@@ -7,7 +7,9 @@
     segment: string | undefined;
     label?: string;
   }[];
-  export let externalLink: { href: string; label: string; rel?: string[] };
+  export let externalLink:
+    | { href: string; label: string; rel?: string[] }
+    | undefined;
 </script>
 
 <nav>
@@ -23,12 +25,16 @@
       </li>
     {/each}
 
-    <li>
-      <a
-        rel="external{externalLink.rel ? ` ${externalLink.rel.join(' ')}` : ''}"
-        href={externalLink.href}>{externalLink.label}</a
-      >
-    </li>
+    {#if externalLink}
+      <li class="left-spaced">
+        <a
+          rel="external{externalLink.rel
+            ? ` ${externalLink.rel.join(' ')}`
+            : ''}"
+          href={externalLink.href}>{externalLink.label}</a
+        >
+      </li>
+    {/if}
   </ul>
 
   <ThemeToggle />
@@ -57,11 +63,11 @@
     white-space: nowrap;
   }
 
-  li:last-child {
+  li.left-spaced {
     margin-left: auto;
   }
 
-  li:last-child a {
+  li.left-spaced a {
     margin-left: 2em;
   }
 
