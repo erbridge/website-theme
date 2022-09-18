@@ -1,5 +1,10 @@
 <script lang="ts">
-  import { AtSign, Github, Twitter } from "@erbridge/svelte-feather";
+  import {
+    AtSign,
+    ChevronDown,
+    Github,
+    Twitter,
+  } from "@erbridge/svelte-feather";
   import Nav from "../components/Nav.svelte";
 
   export let segment: string;
@@ -23,6 +28,10 @@
 </main>
 
 <slot name="aside" />
+
+<div class="scroll-hint">
+  <ChevronDown aria-label="scroll down" />
+</div>
 
 <footer>
   <ul>
@@ -58,6 +67,29 @@
   main {
     min-height: 0;
     flex-grow: 1;
+  }
+
+  .scroll-hint {
+    position: sticky;
+    margin: 0 auto;
+    padding-top: 2rem;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .scroll-hint :global(svg) {
+    width: 3em;
+    height: 3em;
+    color: rgba(var(--text-colour), 0.5);
+  }
+
+  footer {
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(var(--background-colour));
+    box-shadow: 0px -10px 10px 0px rgb(var(--background-colour));
   }
 
   ul {
