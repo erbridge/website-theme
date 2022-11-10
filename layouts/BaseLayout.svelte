@@ -3,6 +3,7 @@
     AtSign,
     ChevronDown,
     Github,
+    MessageSquare,
     Twitter,
   } from "@erbridge/svelte-feather";
   import Nav from "../components/Nav.svelte";
@@ -39,6 +40,10 @@
     <li>
       <Twitter role="presentation" />
       <a rel="external me" href="https://twitter.com/erbridge"> twitter</a>
+    </li>
+    <li>
+      <MessageSquare role="presentation" />
+      <a rel="external me" href="https://tech.lgbt/@erbridge"> mastodon</a>
     </li>
     <li>
       <Github role="presentation" />
