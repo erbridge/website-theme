@@ -1,29 +1,41 @@
 {
-  "name": "@erbridge/website-theme",
-  "version": "0.2.0",
-  "svelte": "index.ts",
-  "scripts": {
-    "validate": "svelte-check"
-  },
-  "peerDependencies": {
-    "@sveltejs/kit": "^1.0.0-next",
-    "normalize.css": "^8.0.1",
-    "svelte": "^3.31.2",
-    "typescript": "^4.0.3"
-  },
-  "dependencies": {
-    "@erbridge/svelte-feather": "^0.1.0",
-    "@formatjs/intl-datetimeformat": "^6.2.0",
-    "@formatjs/intl-getcanonicallocales": "^2.0.4",
-    "@formatjs/intl-locale": "^3.0.6",
-    "@formatjs/intl-numberformat": "^8.1.3",
-    "@formatjs/intl-pluralrules": "^5.1.3",
-    "@types/node": "^16.11.59",
-    "focus-trap": "^7.0.0",
-    "svelte-portal": "^2.2.0"
-  },
-  "devDependencies": {
-    "svelte": "^3.53.0",
-    "svelte-check": "^2.9.0"
-  }
+	"name": "@erbridge/website-theme",
+	"version": "0.2.0",
+	"svelte": "index.ts",
+	"scripts": {
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
+	},
+	"peerDependencies": {
+		"@sveltejs/kit": "^1.0.0-next",
+		"normalize.css": "^8.0.1",
+		"svelte": "^3.31.2",
+		"typescript": "^4.0.3"
+	},
+	"dependencies": {
+		"@erbridge/svelte-feather": "^0.1.0",
+		"@formatjs/intl-datetimeformat": "^6.2.0",
+		"@formatjs/intl-getcanonicallocales": "^2.0.4",
+		"@formatjs/intl-locale": "^3.0.6",
+		"@formatjs/intl-numberformat": "^8.1.3",
+		"@formatjs/intl-pluralrules": "^5.1.3",
+		"@types/node": "^16.11.59",
+		"focus-trap": "^7.0.0",
+		"svelte-portal": "^2.2.0"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.42.1",
+		"@typescript-eslint/parser": "^5.42.1",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.7.1",
+		"prettier-plugin-svelte": "^2.8.0",
+		"svelte": "^3.53.0",
+		"svelte-check": "^2.9.0",
+		"tslib": "^2.4.1",
+		"typescript": "^4.8.4"
+	}
 }
