@@ -1,6 +1,6 @@
 {
 	"name": "@erbridge/website-theme",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"svelte": "index.ts",
 	"scripts": {
 		"check": "svelte-check --tsconfig ./tsconfig.json",
