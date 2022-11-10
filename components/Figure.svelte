@@ -37,7 +37,7 @@
       : document.body.classList.remove("no-scroll");
   }
 
-  function toggleLightbox(event: MouseEvent) {
+  function toggleLightbox(event: MouseEvent | KeyboardEvent) {
     event.preventDefault();
 
     isLightboxVisible = !isLightboxVisible;
@@ -104,6 +104,7 @@
       role="button"
       aria-label="close lightbox"
       on:click={toggleLightbox}
+      on:keypress={toggleLightbox}
     />
     <figure
       in:blur={{ delay: 400, duration: 600, easing: sineOut }}
