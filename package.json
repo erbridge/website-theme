@@ -6,8 +6,8 @@
     "validate": "svelte-check"
   },
   "peerDependencies": {
+    "@sveltejs/kit": "^1.0.0-next",
     "normalize.css": "^8.0.1",
-    "sapper": "^0.29.0",
     "svelte": "^3.31.2",
     "typescript": "^4.0.3"
   },
