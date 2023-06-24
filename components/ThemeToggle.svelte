@@ -4,6 +4,7 @@
 
 	let theme: "dark" | "light" | null = null;
 	let trialTheme: "dark" | "light" | null = null;
+	let transitionProperties: string;
 
 	function toggleTheme() {
 		if (!theme) {
@@ -16,29 +17,33 @@
 	}
 
 	function startThemeTrial() {
-		trialTheme = theme === "dark" ? "light" : "dark";
+		withoutTransitions(() => {
+			trialTheme = theme === "dark" ? "light" : "dark";
 
-		document.documentElement.classList.add(
-			trialTheme === "dark" ? "theme--dark" : "theme--light"
-		);
-		document.documentElement.classList.remove(
-			trialTheme === "dark" ? "theme--light" : "theme--dark"
-		);
+			document.documentElement.classList.add(
+				trialTheme === "dark" ? "theme--dark" : "theme--light"
+			);
+			document.documentElement.classList.remove(
+				trialTheme === "dark" ? "theme--light" : "theme--dark"
+			);
+		});
 	}
 
 	function endThemeTrial() {
-		document.documentElement.classList.add(
-			theme === "dark" ? "theme--dark" : "theme--light"
-		);
-		document.documentElement.classList.remove(
-			theme === "dark" ? "theme--light" : "theme--dark"
-		);
+		withoutTransitions(() => {
+			document.documentElement.classList.add(
+				theme === "dark" ? "theme--dark" : "theme--light"
+			);
+			document.documentElement.classList.remove(
+				theme === "dark" ? "theme--light" : "theme--dark"
+			);
 
-		trialTheme = null;
+			trialTheme = null;
+		});
 	}
 
-	onMount(() => {
-		function initThemeToggle(value: "dark" | "light") {
+	function initThemeToggle(value: "dark" | "light") {
+		withoutTransitions(() => {
 			document.documentElement.classList.add(
 				value === "dark" ? "theme--dark" : "theme--light"
 			);
@@ -48,7 +53,28 @@
 
 			theme = value;
 			trialTheme = null;
-		}
+		});
+	}
+
+	function withoutTransitions(fn: () => void) {
+		document.documentElement.style.setProperty("--transition-properties", "0");
+
+		fn();
+
+		setTimeout(
+			() =>
+				document.documentElement.style.setProperty(
+					"--transition-properties",
+					transitionProperties
+				),
+			0
+		);
+	}
+
+	onMount(() => {
+		transitionProperties = document.documentElement.style.getPropertyValue(
+			"--transition-properties"
+		);
 
 		if (window.matchMedia) {
 			window
