@@ -18,7 +18,6 @@
 		{#each internalLinks as link}
 			<li>
 				<a
-					data-sveltekit-prefetch
 					data-sveltekit-noscroll
 					aria-current={(
 						link.exact
