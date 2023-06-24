@@ -5,7 +5,7 @@
 		Github,
 		MessageSquare,
 		Twitter,
-	} from "@erbridge/svelte-feather";
+	} from "lucide-svelte";
 	import Nav from "../components/Nav.svelte";
 
 	export let pathname: string;

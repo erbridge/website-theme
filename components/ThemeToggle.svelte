@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Moon, Sun } from "@erbridge/svelte-feather";
+	import { Moon, Sun } from "lucide-svelte";
 	import { onMount } from "svelte";
 
 	let theme: "dark" | "light" | null = null;
