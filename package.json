@@ -15,7 +15,7 @@
 		"typescript": "^4.9.4"
 	},
 	"dependencies": {
-		"@formatjs/intl-datetimeformat": "^6.2.0",
+		"@formatjs/intl-datetimeformat": "^6.10.0",
 		"@formatjs/intl-getcanonicallocales": "^2.0.4",
 		"@formatjs/intl-locale": "^3.0.6",
 		"@formatjs/intl-numberformat": "^8.1.3",
