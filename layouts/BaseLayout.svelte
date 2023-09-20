@@ -1,11 +1,5 @@
 <script lang="ts">
-	import {
-		AtSign,
-		ChevronDown,
-		Github,
-		MessageSquare,
-		Twitter,
-	} from "lucide-svelte";
+	import { AtSign, ChevronDown, Github, MessageSquare } from "lucide-svelte";
 	import Nav from "../components/Nav.svelte";
 
 	export let pathname: string;
@@ -37,10 +31,6 @@
 
 <footer>
 	<ul>
-		<li>
-			<Twitter role="presentation" />
-			<a rel="external me" href="https://twitter.com/erbridge"> twitter</a>
-		</li>
 		<li>
 			<MessageSquare role="presentation" />
 			<a rel="external me" href="https://tech.lgbt/@erbridge"> mastodon</a>
