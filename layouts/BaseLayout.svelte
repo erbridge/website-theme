@@ -37,7 +37,7 @@
 		</li>
 		<li>
 			<Github role="presentation" />
-			<a rel="external me" href="https://github.com/erbridge"> github</a>
+			<a rel="external me" href="https://github.com/erbridge"> code</a>
 		</li>
 		<li>
 			<AtSign role="presentation" />
