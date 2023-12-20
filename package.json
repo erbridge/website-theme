@@ -22,7 +22,7 @@
 		"@formatjs/intl-pluralrules": "^5.2.4",
 		"@types/node": "^18.16.18",
 		"focus-trap": "^7.5.2",
-		"lucide-svelte": "^0.252.0",
+		"lucide-svelte": "^0.299.0",
 		"svelte-portal": "^2.2.0"
 	},
 	"devDependencies": {
