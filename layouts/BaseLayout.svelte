@@ -33,7 +33,7 @@
 	<ul>
 		<li>
 			<MessageSquare role="presentation" />
-			<a rel="external me" href="https://tech.lgbt/@erbridge"> social</a>
+			<a rel="external me" href="https://sunspot.garden/@erbridge"> social</a>
 		</li>
 		<li>
 			<Github role="presentation" />
