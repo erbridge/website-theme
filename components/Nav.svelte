@@ -49,7 +49,7 @@
 <style>
 	nav {
 		font-family: var(--heading-font-family);
-		font-weight: 600;
+		font-weight: var(--heading-font-weight);
 		font-size: 1.2rem;
 		display: flex;
 		align-items: center;

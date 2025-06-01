@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Josefin+Sans:wght@700&family=Livvic:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
 :root {
-	--heading-font-family: "Futura", "Trebuchet MS", "Arial", sans-serif;
-	--body-font-family: "Cochin", "Hoefler Text", "Garamond", "Times New Roman",
-		serif;
-	--monospace-font-family: "Andale Mono", "Lucida Console", "Courier New",
-		monospace, monospace;
+	--heading-font-family: "Josefin Sans", sans-serif;
+	--heading-font-weight: 700;
+
+	--body-font-family: "Livvic", sans-serif;
+	--body-font-weight: 300;
+
+	--monospace-font-family: "DM Mono", monospace;
+	--monospace-font-weight: 400;
 
 	--base-line-height: 1.3;
 
@@ -11,6 +16,7 @@
 
 	background-color: rgb(var(--background-colour));
 	font-family: var(--body-font-family);
+	font-weight: var(--body-font-weight);
 	font-size: 14px;
 	line-height: var(--base-line-height);
 	color: rgb(var(--text-colour));
@@ -39,7 +45,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--heading-font-family);
-	font-weight: 600;
+	font-weight: var(--heading-font-weight);
 	line-height: 1.2;
 	text-transform: lowercase;
 }
@@ -113,6 +119,14 @@ a[href^="mailto"]:hover::after {
 	color: rgb(var(--secondary-accent-colour));
 }
 
+/**
+ * We select children of `body` to override normalize.css with a higher
+ * specificity.
+ */
+body b, body strong {
+	font-weight: 600;
+}
+
 blockquote {
 	margin-left: 2em;
 	margin-right: 2em;
@@ -129,12 +143,16 @@ blockquote p::after {
 	margin-left: -0.05em;
 }
 
+/**
+ * We select children of `body` to override normalize.css with a higher
+ * specificity.
+ */
 body button {
 	border: 2px solid rgb(var(--accent-colour));
 	padding: 0.3em 0.5em;
 	background: none;
 	font-family: var(--heading-font-family);
-	font-weight: 600;
+	font-weight: var(--heading-font-weight);
 	line-height: 1.2;
 	text-transform: lowercase;
 	color: rgb(var(--text-colour));
@@ -167,6 +185,7 @@ body kbd,
 body pre,
 body samp {
 	font-family: var(--monospace-font-family);
+	font-weight: var(--monospace-font-weight);
 }
 
 details {
@@ -180,7 +199,7 @@ details > :not(summary) {
 
 details summary {
 	font-family: var(--heading-font-family);
-	font-weight: 600;
+	font-weight: var(--heading-font-weight);
 	line-height: 1.2;
 	text-transform: lowercase;
 	cursor: pointer;
